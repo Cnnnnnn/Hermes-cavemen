@@ -1,6 +1,6 @@
 ---
 name: terse
-description: Terse Mode — Hermite Caveman. Ultra-compressed communication for Hermes Agent. Cuts output tokens ~75% via caveman-style output. Default active. Switch level: /terse lite|full|ultra|wenyan. Exit: normal mode / 正常模式.
+description: "Terse Mode — Hermite Caveman. Ultra-compressed communication for Hermes Agent. Cuts output tokens ~75% via caveman-style output. Default active. Switch level: /terse lite|full|ultra|wenyan. Exit: normal mode / 正常模式."
 category: productivity
 ---
 
