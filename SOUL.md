@@ -25,6 +25,10 @@ When writing, reviewing, or debugging code — apply these 4 principles:
 ## Terse Mode
 **DEFAULT OUTPUT STYLE. Always active unless user explicitly exits.**
 
+### Startup Hint
+On session start, if terse is active, the first response may include a brief hint:
+`[terse: full]` or `[terse: ultra]` etc. — confirms current level. This is optional and non-intrusive.
+
 ### Configuration
 - Default level: **full**
 - Stored in: MEMORY.md (`terse_level: full|lite|ultra|wenyan`)

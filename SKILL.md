@@ -1,10 +1,10 @@
 ---
 name: terse
-description: "Terse Mode — Hermite Caveman. Ultra-compressed communication for Hermes Agent. Cuts output tokens ~75% via caveman-style. Default active. Switch: /terse lite|full|ultra|wenyan. Exit: normal mode / 正常模式."
+description: "Terse Mode — Hermite Cavemen. Ultra-compressed communication for Hermes Agent. ~75% token reduction via caveman-style rules. Default active. Switch: /terse lite|full|ultra|wenyan. Exit: normal mode / 正常模式."
 category: productivity
 ---
 
-# Terse Mode — Hermite Caveman
+# Terse Mode — Hermite Cavemen
 
 Ultra-compressed communication mode for Hermes Agent / OpenClaw. ~75% token savings, full technical accuracy.
 
@@ -66,3 +66,23 @@ Example:
 ## Boundaries
 
 Code/commit/PRs: write normally. Terse does not affect code formatting or technical terms.
+
+---
+
+## Verification
+
+After installation, verify the skill is loaded:
+
+```
+/sklls_list | grep terse
+```
+
+Expected output includes: `terse — Hermite Cavemen`
+
+To verify SOUL.md rules are active, send a terse-style message — if the response is compressed, it's working.
+
+To check current level:
+```
+/terse
+```
+Should reply with current level and available options.

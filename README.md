@@ -1,8 +1,35 @@
-# Hermite Caveman
-
-> 🪨 why use many token when few token do trick
+# Hermite Cavemen
 
 [English](#english) | [中文](#中文)
+
+---
+
+## ⚡ Quick Start
+
+**One line to install:**
+
+```bash
+# Option A: curl into SOUL.md (recommended)
+curl -s https://raw.githubusercontent.com/Cnnnnnn/Hermes-cavemen/main/SOUL.md >> ~/.hermes/SOUL.md
+
+# Option B: clone the repo
+git clone https://github.com/Cnnnnnn/Hermes-cavemen.git ~/Hermes-cavemen
+```
+
+That's it. Terse Mode (`full`) activates automatically on every new session. No restart needed.
+
+**Verify:**
+```
+/sklls_list | grep terse
+```
+Should show `terse — Hermite Caveman` in the list.
+
+**Switch levels:**
+```
+/terse ultra     # max compression
+/terse wenyan    # 文言文
+/normal mode     # exit
+```
 
 ---
 
@@ -63,7 +90,7 @@ Each `/terse xxx` command writes the preference to `MEMORY.md`. On every new ses
 
 ## Implementation: Original vs Hermite
 
-| Dimension | Original caveman | Hermite Caveman |
+| Dimension | Original caveman | Hermite Cavemen |
 |-----------|-----------------|-----------------|
 | Target platform | Claude Code | Hermes / OpenClaw |
 | Activation | Hook system + flag file | SOUL.md rules injection |
@@ -72,17 +99,19 @@ Each `/terse xxx` command writes the preference to `MEMORY.md`. On every new ses
 | Statusline badge | `[CAVEMAN]` in Claude Code UI | Not available |
 | Wenyan sub-levels | lite / full / ultra | lite / full / ultra |
 
-**Why the differences?** Hermes / OpenClaw does not expose Claude Code's Hook API, flag file mechanism, statusline, or plugin system. Hermite Caveman achieves equivalent behavior through SOUL.md rules injection, which Hermes reads on every session start.
+**Why the differences?** Hermes / OpenClaw does not expose Claude Code's Hook API, flag file mechanism, statusline, or plugin system. Hermite Cavemen achieves equivalent behavior through SOUL.md rules injection, which Hermes reads on every session start.
 
 **What is identical:** Core compression rules, intensity levels, auto-clarity conditions, code/commit/PR boundaries, activation/deactivation commands, ~75% token reduction.
 
 ## Project Structure
 
 ```
-hermite-caveman/
+hermes-cavemen/
 ├── README.md       ← Bilingual (this file)
 ├── SOUL.md         ← Complete Terse Mode rules
 ├── SKILL.md        ← Skill format (optional)
+├── CHANGELOG.md    ← Version history
+├── VERSION         ← Current version
 └── LICENSE         ← MIT
 ```
 
@@ -91,6 +120,33 @@ Credit: Based on [JuliusBrussee/caveman](https://github.com/JuliusBrussee/cavema
 ---
 
 # 中文
+
+## ⚡ 快速安装
+
+**一行安装：**
+
+```bash
+# 方式 A：curl 追加到 SOUL.md（推荐）
+curl -s https://raw.githubusercontent.com/Cnnnnnn/Hermes-cavemen/main/SOUL.md >> ~/.hermes/SOUL.md
+
+# 方式 B：clone 仓库
+git clone https://github.com/Cnnnnnn/Hermes-cavemen.git ~/Hermes-cavemen
+```
+
+搞定。Terse Mode（`full` 级别）自动激活，无需重启。
+
+**验证安装：**
+```
+/sklls_list | grep terse
+```
+输出中有 `terse — Hermite Caveman` 即为成功。
+
+**切换级别：**
+```
+/terse ultra     # 极致压缩
+/terse wenyan    # 文言文
+/normal mode     # 退出
+```
 
 ## 是什么
 
@@ -137,9 +193,9 @@ Hermes Agent / OpenClaw 版本的 [caveman](https://github.com/JuliusBrussee/cav
 
 每次执行 `/terse xxx` 时，偏好会写入 `MEMORY.md`。新会话启动时自动读取并应用，无需重复设置。
 
-## 实现机制：原版 vs Hermite Caveman
+## 实现机制：原版 vs Hermite Cavemen
 
-| 维度 | 原版 caveman | Hermite Caveman |
+| 维度 | 原版 caveman | Hermite Cavemen |
 |------|-------------|-----------------|
 | 目标平台 | Claude Code | Hermes / OpenClaw |
 | 激活机制 | Hook 系统 + flag 文件 | SOUL.md 规则注入 |
@@ -148,17 +204,19 @@ Hermes Agent / OpenClaw 版本的 [caveman](https://github.com/JuliusBrussee/cav
 | 状态栏显示 | Claude Code UI 中的 `[CAVEMAN]` | 不支持 |
 | Wenyan 子级别 | lite / full / ultra | lite / full / ultra |
 
-**差异原因：** Hermes / OpenClaw 不提供 Claude Code 的 Hook API、flag 文件机制、状态栏和插件系统。Hermite Caveman 通过 SOUL.md 规则注入实现等效行为——Hermes 每次启动读取 SOUL.md，规则自动生效。
+**差异原因：** Hermes / OpenClaw 不提供 Claude Code 的 Hook API、flag 文件机制、状态栏和插件系统。Hermite Cavemen 通过 SOUL.md 规则注入实现等效行为——Hermes 每次启动读取 SOUL.md，规则自动生效。
 
 **完全一致的部分：** 核心压缩规则、强度级别、Auto-Clarity 条件、代码/commit/PR 边界、激活/退出指令、约 75% 的 token 压缩率。
 
 ## 项目结构
 
 ```
-hermite-caveman/
+hermes-cavemen/
 ├── README.md       ← 双语版（本文件）
 ├── SOUL.md         ← 完整 Terse Mode 规则
 ├── SKILL.md        ← Skill 格式（可选）
+├── CHANGELOG.md    ← 版本历史
+├── VERSION         ← 当前版本
 └── LICENSE         ← MIT
 ```
 
