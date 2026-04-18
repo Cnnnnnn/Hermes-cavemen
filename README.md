@@ -107,16 +107,38 @@ Each `/terse xxx` command writes the preference to `MEMORY.md`. On every new ses
 
 **What is identical:** Core compression rules, intensity levels, auto-clarity conditions, code/commit/PR boundaries, activation/deactivation commands, ~75% token reduction.
 
+## Maintenance
+
+Three supporting scripts for long-term use:
+
+```bash
+# Self-Update — check for new version, show changelog, upgrade in one shot
+curl -s https://raw.githubusercontent.com/Cnnnnnn/hermes-cavemen/main/update.sh | bash
+
+# Verify — test if Terse Mode is active, measure compression rate
+curl -s https://raw.githubusercontent.com/Cnnnnnn/hermes-cavemen/main/verify.sh | bash
+
+# Uninstall — remove Terse Mode rules, restore backup
+curl -s https://raw.githubusercontent.com/Cnnnnnn/hermes-cavemen/main/uninstall.sh | bash
+```
+
+See [`TROUBLESHOOTING.md`](TROUBLESHOOTING.md) if anything breaks.
+
 ## Project Structure
 
 ```
 hermes-cavemen/
-├── README.md       ← Bilingual (this file)
-├── SOUL.md         ← Complete Terse Mode rules
-├── SKILL.md        ← Skill format (optional)
-├── CHANGELOG.md    ← Version history
-├── VERSION         ← Current version
-└── LICENSE         ← MIT
+├── README.md           ← Bilingual intro (this file)
+├── SOUL.md             ← Complete Terse Mode rules
+├── SKILL.md            ← Skill format (optional)
+├── install.sh          ← One-line installer
+├── update.sh           ← Self-Update script
+├── uninstall.sh        ← Uninstall script
+├── verify.sh           ← Installation verifier
+├── TROUBLESHOOTING.md  ← Common issues + fixes
+├── CHANGELOG.md        ← Version history
+├── VERSION             ← Current version
+└── LICENSE             ← MIT
 ```
 
 Credit: Based on [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (37.6k stars, MIT License).
@@ -212,16 +234,38 @@ Hermes Agent / OpenClaw 版本的 [caveman](https://github.com/JuliusBrussee/cav
 
 **完全一致的部分：** 核心压缩规则、强度级别、Auto-Clarity 条件、代码/commit/PR 边界、激活/退出指令、约 75% 的 token 压缩率。
 
+## 维护脚本
+
+三个支撑长期使用的脚本：
+
+```bash
+# Self-Update — 检查新版本、显示更新日志、一键升级
+curl -s https://raw.githubusercontent.com/Cnnnnnn/hermes-cavemen/main/update.sh | bash
+
+# Verify — 测试 Terse Mode 是否生效，测量压缩率
+curl -s https://raw.githubusercontent.com/Cnnnnnn/hermes-cavemen/main/verify.sh | bash
+
+# Uninstall — 移除 Terse Mode 规则，恢复备份
+curl -s https://raw.githubusercontent.com/Cnnnnnn/hermes-cavemen/main/uninstall.sh | bash
+```
+
+遇问题见 [`TROUBLESHOOTING.md`](TROUBLESHOOTING.md)。
+
 ## 项目结构
 
 ```
 hermes-cavemen/
-├── README.md       ← 双语版（本文件）
-├── SOUL.md         ← 完整 Terse Mode 规则
-├── SKILL.md        ← Skill 格式（可选）
-├── CHANGELOG.md    ← 版本历史
-├── VERSION         ← 当前版本
-└── LICENSE         ← MIT
+├── README.md           ← 双语介绍（本文件）
+├── SOUL.md             ← 完整 Terse Mode 规则
+├── SKILL.md            ← Skill 格式（可选）
+├── install.sh          ← 一键安装脚本
+├── update.sh           ← 自我更新脚本
+├── uninstall.sh        ← 卸载脚本
+├── verify.sh           ← 安装验证脚本
+├── TROUBLESHOOTING.md  ← 常见问题与解决方案
+├── CHANGELOG.md        ← 版本历史
+├── VERSION             ← 当前版本
+└── LICENSE             ← MIT
 ```
 
 致谢：基于 [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman)（37.6k stars，MIT License）。
