@@ -12,8 +12,11 @@ detect_platform() {
         echo "hermes"
     elif [ -d "$HOME/.hermes" ]; then
         echo "hermes"
-    elif [ -d "$HOME/.openclaw" ]; then
+    elif [ -d "$HOME/.openclaw" ] && [ -f "$HOME/.openclaw/openclaw.json" ]; then
         echo "openclaw"
+    elif [ -d "$HOME/.openclaw" ]; then
+        # Hermes uses ~/.openclaw as workspace, NOT OpenClaw itself
+        echo "hermes"
     elif command -v hermes &>/dev/null; then
         echo "hermes"
     elif command -v openclaw &>/dev/null; then

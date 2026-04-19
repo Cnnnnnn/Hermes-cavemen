@@ -45,8 +45,12 @@ detect_platform() {
         echo "hermes"
     elif [ -d "$HOME/.hermes" ]; then
         echo "hermes"
-    elif [ -d "$HOME/.openclaw" ]; then
+    elif [ -d "$HOME/.openclaw" ] && [ -f "$HOME/.openclaw/openclaw.json" ]; then
+        # Only OpenClaw if openclaw.json exists (distinguishes from Hermes workspace)
         echo "openclaw"
+    elif [ -d "$HOME/.openclaw" ]; then
+        # Hermes uses ~/.openclaw as workspace, NOT OpenClaw itself
+        echo "hermes"
     else
         echo "hermes"
     fi

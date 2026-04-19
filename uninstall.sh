@@ -14,7 +14,10 @@ if [ -n "$HERMES_CONFIG_DIR" ]; then
     SOUL_DIR="$HERMES_CONFIG_DIR"
 elif [ -d "$HOME/.hermes" ]; then
     SOUL_DIR="$HOME/.hermes"
+elif [ -d "$HOME/.openclaw" ] && [ -f "$HOME/.openclaw/openclaw.json" ]; then
+    SOUL_DIR="$HOME/.openclaw"
 elif [ -d "$HOME/.openclaw" ]; then
+    # Hermes uses ~/.openclaw as workspace, NOT OpenClaw itself
     SOUL_DIR="$HOME/.openclaw"
 else
     echo "[hermes-cavemen] ERROR: Cannot find Hermes or OpenClaw config directory."
